@@ -14,8 +14,10 @@ public class MainActivity2 extends AppCompatActivity {
     String n;
     int N, k =0;
     int[] numberK;
-    TextView deskTop;
+    TextView deskTop,textPlayer;
     EditText step;
+    int pN=1;
+    final String playerNumber1="Первый игрок",playerNumber2="Второй игрок";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,12 @@ public class MainActivity2 extends AppCompatActivity {
         Bundle arguments = getIntent().getExtras();
         n = arguments.getString("N");
         deskTop = (TextView) findViewById(R.id.textDeskTop);
+        textPlayer = (TextView) findViewById(R.id.textPlayer); textPlayer.setText(playerNumber1);
         N = Integer.parseInt(n);
         deskTop.setText(n);
         //*********************************
         numberK = new int[N];
         numberK[k] = N;
-
     }
 
     public void onClick(View view) {
@@ -44,9 +46,17 @@ public class MainActivity2 extends AppCompatActivity {
                     k++;
                     numberK[k]=Integer.parseInt(strArr[2]);
                     String s="";
-                    for ( int i = 0; i <= k; i++) s+=numberK[i] + " ";
-                        deskTop.setText(s);
-                        step.setText("");
+                    boolean key=true;
+                    for ( int i = 0; i <= k; i++) {
+                        s+=numberK[i] + " ";
+                        if(numberK[i]>2) key=false;
+                    }
+                    deskTop.setText(s);
+                    step.setText("");
+                    if(key) {step.setText("fsdfkjdsahlksdj;lksdfjf;ls");}
+
+                    if(pN==1) {pN=2; textPlayer.setText(playerNumber2);}
+                    else {pN=1; textPlayer.setText(playerNumber1);}
                 } else step.setText("Введите другие данные");
             } else
                 step.setText("Введите другие данные");
