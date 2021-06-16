@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 public class MainActivity2 extends AppCompatActivity {
     String n;
-    int N, k = 1;
+    int N, k =0;
     int[] numberK;
     TextView deskTop;
     EditText step;
@@ -39,18 +39,19 @@ public class MainActivity2 extends AppCompatActivity {
         String strArr[] = n.split(" ");
         if (numberK[Integer.parseInt(strArr[0])-1] == Integer.parseInt(strArr[1]) + Integer.parseInt(strArr[2])) {
             if (Integer.parseInt(strArr[1]) != Integer.parseInt(strArr[2])) {
-                if (Integer.parseInt(strArr[0]) <= k) {
+                if (Integer.parseInt(strArr[0]) <= k+1) {
                     numberK[Integer.parseInt(strArr[0])-1]=Integer.parseInt(strArr[1]);
                     k++;
-                    //numberK(Integer.parseInt(strArr[2]);
-                    for ( int k = 1; k < N; k++) {
-                        deskTop.setText(Integer.parseInt(strArr[k+1]) + " ");
+                    numberK[k]=Integer.parseInt(strArr[2]);
+                    String s="";
+                    for ( int i = 0; i <= k; i++) s+=numberK[i] + " ";
+                        deskTop.setText(s);
                         step.setText("");
-                    }
-                } else step.setText("Введите другие данные");
+
+                } else step.setText("Введите другие данные1");
             } else
-                step.setText("Введите другие данные");
+                step.setText("Введите другие данные2");
         }
-        else step.setText("Введите другие данные");
+        else step.setText("Введите другие данные3");
     }
 }
