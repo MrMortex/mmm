@@ -38,4 +38,10 @@
         android:onClick="onClick"
         android:text="Делаем ход" />
 
+    <TextView
+        android:id="@+id/textPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:text="" />
+
 </LinearLayout>

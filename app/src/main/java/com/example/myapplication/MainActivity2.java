@@ -47,11 +47,10 @@ public class MainActivity2 extends AppCompatActivity {
                     for ( int i = 0; i <= k; i++) s+=numberK[i] + " ";
                         deskTop.setText(s);
                         step.setText("");
-
-                } else step.setText("Введите другие данные1");
+                } else step.setText("Введите другие данные");
             } else
-                step.setText("Введите другие данные2");
+                step.setText("Введите другие данные");
         }
-        else step.setText("Введите другие данные3");
+        else step.setText("Введите другие данные");
     }
 }
