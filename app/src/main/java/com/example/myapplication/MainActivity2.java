@@ -53,7 +53,7 @@ public class MainActivity2 extends AppCompatActivity {
                     }
                     deskTop.setText(s);
                     step.setText("");
-                    if(key) {step.setText("fsdfkjdsahlksdj;lksdfjf;ls");}
+                    if(key) {step.setText("Игра окончена! Поздравляем с победой!");}
 
                     if(pN==1) {pN=2; textPlayer.setText(playerNumber2);}
                     else {pN=1; textPlayer.setText(playerNumber1);}

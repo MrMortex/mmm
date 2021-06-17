@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Nim">
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,8 +21,7 @@
     <EditText
         android:id="@+id/textN"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
-         />
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/button"
