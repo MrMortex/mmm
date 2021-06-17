@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class Nim extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     EditText n;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
